@@ -17,7 +17,7 @@ public class BenchmarkRunner {
 
     @Benchmark
     @BenchmarkMode(Mode.Throughput)
-    @OutputTimeUnit(TimeUnit.NANOSECONDS)
+    @OutputTimeUnit(TimeUnit.MILLISECONDS)
     public void gson_parsing_to_json() {
         GsonJsonParser<User> gsonJsonParser = new GsonJsonParser<>();
         User user = new User();
@@ -31,7 +31,7 @@ public class BenchmarkRunner {
 
     @Benchmark
     @BenchmarkMode(Mode.Throughput)
-    @OutputTimeUnit(TimeUnit.NANOSECONDS)
+    @OutputTimeUnit(TimeUnit.MILLISECONDS)
     public void gson_parsing_from_json() {
         GsonJsonParser<User> gsonJsonParser = new GsonJsonParser<>();
         String json = "{\"id\":666,\"email\":\"marlon@email.com\",\"name\":\"Marlon\",\"createdAt\":\"2023-09-11\"}";

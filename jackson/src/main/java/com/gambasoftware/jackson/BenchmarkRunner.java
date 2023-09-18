@@ -18,7 +18,7 @@ public class BenchmarkRunner {
 
     @Benchmark
     @BenchmarkMode(Mode.Throughput)
-    @OutputTimeUnit(TimeUnit.NANOSECONDS)
+    @OutputTimeUnit(TimeUnit.MILLISECONDS)
     public void jackson_parsing_to_json() throws JsonProcessingException {
         JacksonJsonParser<User> jacksonJsonParser = new JacksonJsonParser<>();
         User user = new User();
@@ -32,7 +32,7 @@ public class BenchmarkRunner {
 
     @Benchmark
     @BenchmarkMode(Mode.Throughput)
-    @OutputTimeUnit(TimeUnit.NANOSECONDS)
+    @OutputTimeUnit(TimeUnit.MILLISECONDS)
     public void jackson_parsing_from_json() throws JsonProcessingException {
         JacksonJsonParser<User> jacksonJsonParser = new JacksonJsonParser<>();
         String json = "{\"id\":666,\"email\":\"marlon@email.com\",\"name\":\"Marlon\",\"createdAt\":\"2023-09-11\"}";

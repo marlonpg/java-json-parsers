@@ -17,7 +17,7 @@ public class BenchmarkRunner {
 
     @Benchmark
     @BenchmarkMode(Mode.Throughput)
-    @OutputTimeUnit(TimeUnit.NANOSECONDS)
+    @OutputTimeUnit(TimeUnit.MILLISECONDS)
     public void fastjson2_parsing_to_json() {
         Fastjson2JsonParser<User> fastjson2JsonParser = new Fastjson2JsonParser<>();
         User user = new User();
@@ -31,7 +31,7 @@ public class BenchmarkRunner {
 
     @Benchmark
     @BenchmarkMode(Mode.Throughput)
-    @OutputTimeUnit(TimeUnit.NANOSECONDS)
+    @OutputTimeUnit(TimeUnit.MILLISECONDS)
     public void fastjson2_parsing_from_json() {
         Fastjson2JsonParser<User> fastjson2JsonParser = new Fastjson2JsonParser<>();
         String json = "{\"id\":666,\"email\":\"marlon@email.com\",\"name\":\"Marlon\",\"createdAt\":\"2023-09-11\"}";
