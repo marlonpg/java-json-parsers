@@ -17,7 +17,7 @@ public class BenchmarkRunner {
     }
 
     @Benchmark
-    @BenchmarkMode(Mode.AverageTime)
+    @BenchmarkMode(Mode.Throughput)
     @OutputTimeUnit(TimeUnit.NANOSECONDS)
     public void jackson_parsing_to_json() throws JsonProcessingException {
         JacksonJsonParser<User> jacksonJsonParser = new JacksonJsonParser<>();
@@ -31,32 +31,9 @@ public class BenchmarkRunner {
     }
 
     @Benchmark
-    @BenchmarkMode(Mode.AverageTime)
+    @BenchmarkMode(Mode.Throughput)
     @OutputTimeUnit(TimeUnit.NANOSECONDS)
     public void jackson_parsing_from_json() throws JsonProcessingException {
-        JacksonJsonParser<User> jacksonJsonParser = new JacksonJsonParser<>();
-        String json = "{\"id\":666,\"email\":\"marlon@email.com\",\"name\":\"Marlon\",\"createdAt\":\"2023-09-11\"}";
-        User resultObject = jacksonJsonParser.fromJson(json, User.class);
-    }
-
-    @Benchmark
-    @BenchmarkMode(Mode.AverageTime)
-    @OutputTimeUnit(TimeUnit.NANOSECONDS)
-    public void jackson_streaming_parsing_to_json() throws JsonProcessingException {
-        JacksonJsonParser<User> jacksonJsonParser = new JacksonJsonParser<>();
-        User user = new User();
-        user.setEmail("marlon@email.com");
-        user.setId(666L);
-        user.setName("Marlon");
-        user.setCreatedAt(LocalDate.of(2023, 9, 11));
-
-        String json = jacksonJsonParser.toJson(user);
-    }
-
-    @Benchmark
-    @BenchmarkMode(Mode.AverageTime)
-    @OutputTimeUnit(TimeUnit.NANOSECONDS)
-    public void jackson_streaming_parsing_from_json() throws JsonProcessingException {
         JacksonJsonParser<User> jacksonJsonParser = new JacksonJsonParser<>();
         String json = "{\"id\":666,\"email\":\"marlon@email.com\",\"name\":\"Marlon\",\"createdAt\":\"2023-09-11\"}";
         User resultObject = jacksonJsonParser.fromJson(json, User.class);

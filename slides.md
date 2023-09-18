@@ -29,6 +29,7 @@
 	<artifactId>jackson-databind</artifactId>
 	<version>2.15.2</version>
 </dependency>
+*it brings jackson-core and jackson-annotations
 size 1500kb	
 
 https://reflectoring.io/jackson/
@@ -61,3 +62,13 @@ size 1900kb
 	
 	
 X-slide performance results
+
+https://github.com/FasterXML/jvm-json-benchmark
+https://github.com/google/gson
+https://github.com/alibaba/fastjson2/blob/main/README_EN.md
+https://reflectoring.io/jackson/
+https://www.baeldung.com/java-json
+https://mkyong.com/java/jackson-tree-model-example/
+https://mkyong.com/java/jackson-how-to-parse-json/
+https://www.baeldung.com/jackson-object-mapper-tutorial
+https://www.baeldung.com/java-microbenchmark-harness

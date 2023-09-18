@@ -7,7 +7,7 @@ import java.time.LocalDate;
 
 public class Example {
 
-    public static void main(String[] args) {
+    public static void main(String[] args){
         Gson gson = new Gson();
 
         User user = new User();

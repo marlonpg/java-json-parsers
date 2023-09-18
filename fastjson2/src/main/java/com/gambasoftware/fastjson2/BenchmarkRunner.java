@@ -16,7 +16,7 @@ public class BenchmarkRunner {
     }
 
     @Benchmark
-    @BenchmarkMode(Mode.AverageTime)
+    @BenchmarkMode(Mode.Throughput)
     @OutputTimeUnit(TimeUnit.NANOSECONDS)
     public void fastjson2_parsing_to_json() {
         Fastjson2JsonParser<User> fastjson2JsonParser = new Fastjson2JsonParser<>();
@@ -30,7 +30,7 @@ public class BenchmarkRunner {
     }
 
     @Benchmark
-    @BenchmarkMode(Mode.AverageTime)
+    @BenchmarkMode(Mode.Throughput)
     @OutputTimeUnit(TimeUnit.NANOSECONDS)
     public void fastjson2_parsing_from_json() {
         Fastjson2JsonParser<User> fastjson2JsonParser = new Fastjson2JsonParser<>();

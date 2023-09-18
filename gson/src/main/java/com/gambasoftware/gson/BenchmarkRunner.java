@@ -16,7 +16,7 @@ public class BenchmarkRunner {
     }
 
     @Benchmark
-    @BenchmarkMode(Mode.AverageTime)
+    @BenchmarkMode(Mode.Throughput)
     @OutputTimeUnit(TimeUnit.NANOSECONDS)
     public void gson_parsing_to_json() {
         GsonJsonParser<User> gsonJsonParser = new GsonJsonParser<>();
@@ -30,7 +30,7 @@ public class BenchmarkRunner {
     }
 
     @Benchmark
-    @BenchmarkMode(Mode.AverageTime)
+    @BenchmarkMode(Mode.Throughput)
     @OutputTimeUnit(TimeUnit.NANOSECONDS)
     public void gson_parsing_from_json() {
         GsonJsonParser<User> gsonJsonParser = new GsonJsonParser<>();

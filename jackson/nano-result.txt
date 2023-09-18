@@ -62,3 +62,22 @@ Result "com.gambasoftware.jackson.BenchmarkRunner.jackson_parsing_to_json":
 Benchmark                                  Mode  Cnt    Score   Error  Units
 BenchmarkRunner.jackson_parsing_from_json  avgt   25  711,604 ± 4,263  ns/op
 BenchmarkRunner.jackson_parsing_to_json    avgt   25  358,365 ± 5,688  ns/op
+
+
+########
+fastjson2
+########
+
+Result "com.gambasoftware.fastjson2.BenchmarkRunner.fastjson2_parsing_from_json":
+  111,387 ±(99.9%) 7,033 ns/op [Average]
+  (min, avg, max) = (96,585, 111,387, 125,720), stdev = 9,389
+  CI (99.9%): [104,354, 118,420] (assumes normal distribution)
+
+Result "com.gambasoftware.fastjson2.BenchmarkRunner.fastjson2_parsing_to_json":
+  98,130 ±(99.9%) 5,296 ns/op [Average]
+  (min, avg, max) = (93,181, 98,130, 112,141), stdev = 7,070
+  CI (99.9%): [92,834, 103,426] (assumes normal distribution)
+
+Benchmark                                    Mode  Cnt    Score   Error  Units
+BenchmarkRunner.fastjson2_parsing_from_json  avgt   25  111,387 ± 7,033  ns/op
+BenchmarkRunner.fastjson2_parsing_to_json    avgt   25   98,130 ± 5,296  ns/op
