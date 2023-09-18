@@ -1,0 +1,64 @@
+########
+gson
+########
+
+Result "com.gambasoftware.gson.BenchmarkRunner.gson_parsing_from_json":
+  4924,170 ±(99.9%) 59,044 ns/op [Average]
+  (min, avg, max) = (4787,122, 4924,170, 5027,275), stdev = 78,822
+  CI (99.9%): [4865,127, 4983,214] (assumes normal distribution)
+
+Result "com.gambasoftware.gson.BenchmarkRunner.gson_parsing_to_json":
+  4499,122 ±(99.9%) 40,546 ns/op [Average]
+  (min, avg, max) = (4406,478, 4499,122, 4585,701), stdev = 54,128
+  CI (99.9%): [4458,576, 4539,668] (assumes normal distribution)
+
+Benchmark                               Mode  Cnt     Score    Error  Units
+BenchmarkRunner.gson_parsing_from_json  avgt   25  4924,170 ± 59,044  ns/op
+BenchmarkRunner.gson_parsing_to_json    avgt   25  4499,122 ± 40,546  ns/op
+
+Result "com.gambasoftware.gson.BenchmarkRunner.gson_parsing_from_json":
+  1022,297 ±(99.9%) 13,750 ns/op [Average]
+  (min, avg, max) = (997,074, 1022,297, 1055,117), stdev = 18,356
+  CI (99.9%): [1008,547, 1036,047] (assumes normal distribution)
+
+Result "com.gambasoftware.gson.BenchmarkRunner.gson_parsing_to_json":
+  672,233 ±(99.9%) 15,393 ns/op [Average]
+  (min, avg, max) = (646,137, 672,233, 716,168), stdev = 20,549
+  CI (99.9%): [656,840, 687,626] (assumes normal distribution)
+
+Benchmark                               Mode  Cnt     Score    Error  Units
+BenchmarkRunner.gson_parsing_from_json  avgt   25  1022,297 ± 13,750  ns/op
+BenchmarkRunner.gson_parsing_to_json    avgt   25   672,233 ± 15,393  ns/op
+
+########
+jackson
+########
+
+
+Result "com.gambasoftware.jackson.BenchmarkRunner.jackson_parsing_from_json":
+  11550,553 ±(99.9%) 194,051 ns/op [Average]
+  (min, avg, max) = (11127,537, 11550,553, 12017,080), stdev = 259,053
+  CI (99.9%): [11356,502, 11744,604] (assumes normal distribution)
+
+Result "com.gambasoftware.jackson.BenchmarkRunner.jackson_parsing_to_json":
+  9795,099 ±(99.9%) 89,993 ns/op [Average]
+  (min, avg, max) = (9584,531, 9795,099, 9998,689), stdev = 120,138
+  CI (99.9%): [9705,107, 9885,092] (assumes normal distribution)
+
+Benchmark                                  Mode  Cnt      Score     Error  Units
+BenchmarkRunner.jackson_parsing_from_json  avgt   25  11550,553 ± 194,051  ns/op
+BenchmarkRunner.jackson_parsing_to_json    avgt   25   9795,099 ±  89,993  ns/op
+
+Result "com.gambasoftware.jackson.BenchmarkRunner.jackson_parsing_from_json":
+  711,604 ±(99.9%) 4,263 ns/op [Average]
+  (min, avg, max) = (703,987, 711,604, 722,791), stdev = 5,692
+  CI (99.9%): [707,341, 715,867] (assumes normal distribution)
+
+Result "com.gambasoftware.jackson.BenchmarkRunner.jackson_parsing_to_json":
+  358,365 ±(99.9%) 5,688 ns/op [Average]
+  (min, avg, max) = (349,879, 358,365, 368,716), stdev = 7,593
+  CI (99.9%): [352,677, 364,053] (assumes normal distribution)
+  
+Benchmark                                  Mode  Cnt    Score   Error  Units
+BenchmarkRunner.jackson_parsing_from_json  avgt   25  711,604 ± 4,263  ns/op
+BenchmarkRunner.jackson_parsing_to_json    avgt   25  358,365 ± 5,688  ns/op
