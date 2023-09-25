@@ -37,3 +37,16 @@ BenchmarkRunner.gson_parsing_to_json    thrpt   25  1464,994 ± 52,134  ops/ms
 ########
 fastjson2
 ########
+Result "com.gambasoftware.fastjson2.BenchmarkRunner.fastjson2_parsing_from_json":
+  9659,613 ±(99.9%) 432,446 ops/ms [Average]
+  (min, avg, max) = (8781,977, 9659,613, 10380,545), stdev = 577,303
+  CI (99.9%): [9227,167, 10092,059] (assumes normal distribution)
+
+Result "com.gambasoftware.fastjson2.BenchmarkRunner.fastjson2_parsing_to_json":
+  10053,158 ±(99.9%) 702,559 ops/ms [Average]
+  (min, avg, max) = (8489,909, 10053,158, 10837,575), stdev = 937,897
+  CI (99.9%): [9350,598, 10755,717] (assumes normal distribution)
+
+Benchmark                                     Mode  Cnt      Score     Error   Units
+BenchmarkRunner.fastjson2_parsing_from_json  thrpt   25   9659,613 ± 432,446  ops/ms
+BenchmarkRunner.fastjson2_parsing_to_json    thrpt   25  10053,158 ± 702,559  ops/ms
